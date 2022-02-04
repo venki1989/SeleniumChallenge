@@ -20,7 +20,7 @@ public class LoginAndSelectMaxItem extends base {
 	{
 		driver=initializeDriver(); // initializeDriver method returns driver from base class
 		cart = new CartPage(driver);
-		driver.get("https://www.saucedemo.com/");
+		driver.get(properties.getProperty("URL"));
 		cart.doLogin(user,pass);
 		cart.selectItem();
 		Thread.sleep(3000);
